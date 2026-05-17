@@ -1,0 +1,487 @@
+@use "tokens" as t;
+
+// =============================================================================
+// Lume DS — Semantic tokens per theme (CSS custom properties)
+// Default = dark  |  [data-theme="light"]  |  [data-theme="hc"]
+// =============================================================================
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  // canvas / surfaces
+  --bg:          #{t.$slate-900};
+  --bg-surface:  #{t.$slate-800};
+  --bg-elevated: #263348;
+  --bg-sunken:   #{t.$slate-950};
+
+  // foreground
+  --fg-1: #{t.$slate-100};
+  --fg-2: #{t.$slate-300};
+  --fg-3: #{t.$slate-400};
+  --fg-muted: #{t.$slate-500};
+
+  // accent (amber-500 in dark/light, yellow-hc in hc)
+  --accent:       #{t.$amber-500};
+  --accent-hover: #{t.$amber-400};
+  --link:         #{t.$amber-500};
+  --link-hover:   #{t.$amber-400};
+
+  // header
+  --header-bg:      #{t.$slate-900};
+  --header-border:  #{t.$slate-700};
+
+  // logo
+  --logo-mark-bg:   #{t.$amber-500};
+  --logo-mark-fg:   #{t.$white};
+  --logo-text-fg:   #{t.$white};
+
+  // sidebar (always dark in light+dark modes)
+  --sidebar-bg:            #{t.$slate-900};
+  --sidebar-border:        #{t.$slate-700};
+  --sidebar-label-fg:      #{t.$slate-500};
+  --sidebar-item-fg:       #{t.$slate-400};
+  --sidebar-item-hover-bg: #{t.$slate-700};
+  --sidebar-active-bg:     #{t.$amber-500};
+  --sidebar-active-fg:     #{t.$white};
+  --sidebar-active-icon:   #{t.$white};
+  --sidebar-divider:       #{t.$slate-700};
+
+  // controls (font scale + mode switcher)
+  --ctrl-bg:        #{t.$slate-800};
+  --ctrl-border:    #{t.$slate-700};
+  --ctrl-fg:        #{t.$slate-500};
+  --ctrl-active-bg: #{t.$amber-500};
+  --ctrl-active-fg: #{t.$white};
+  --ctrl-label-fg:  #{t.$slate-500};
+
+  // breadcrumb
+  --breadcrumb-fg: #{t.$slate-500};
+
+  // WCAG chips
+  --chip-aaa-bg: #{t.$green-700};
+  --chip-aaa-fg: #{t.$white};
+  --chip-aa-bg:  #{t.$blue-800};
+  --chip-aa-fg:  #{t.$white};
+
+  // section labels (uppercase muted headers inside page)
+  --section-label-fg: #{t.$slate-500};
+  --divider:          #{t.$slate-800};
+
+  // preview box
+  --preview-bg:     #{t.$slate-800};
+  --preview-border: #{t.$slate-700};
+  --preview-label:  #{t.$slate-500};
+
+  // do / dont
+  --do-bg:       #{t.$green-950};
+  --do-border:   #{t.$green-500};
+  --do-label-fg: #{t.$green-300};
+  --do-text-fg:  #{t.$green-300};
+  --do-inner-bg: #{t.$slate-800};
+  --dont-bg:     #{t.$red-950};
+  --dont-border: #{t.$red-600};
+  --dont-label-fg: #{t.$red-300};
+  --dont-text-fg: #{t.$red-300};
+  --dont-inner-bg: #{t.$slate-800};
+
+  // buttons
+  --btn-primary-bg:       #{t.$amber-500};
+  --btn-primary-fg:       #{t.$white};
+  --btn-secondary-bg:     transparent;
+  --btn-secondary-fg:     #{t.$slate-100};
+  --btn-secondary-border: #{t.$slate-100};
+  --btn-ghost-fg:         #{t.$slate-300};
+  --btn-ghost-border:     #{t.$slate-300};
+  --btn-disabled-bg:      #{t.$slate-700};
+  --btn-disabled-fg:      #{t.$slate-500};
+
+  // alerts
+  --alert-success-bg:     #{t.$green-950};
+  --alert-success-border: #{t.$green-300};
+  --alert-success-fg:     #{t.$green-300};
+  --alert-danger-bg:      #{t.$red-950};
+  --alert-danger-border:  #{t.$red-300};
+  --alert-danger-fg:      #{t.$red-300};
+  --alert-warning-bg:     #1C1306;
+  --alert-warning-border: #{t.$warn-300};
+  --alert-warning-fg:     #{t.$warn-300};
+  --alert-info-bg:        #0A1929;
+  --alert-info-border:    #{t.$blue-300};
+  --alert-info-fg:        #{t.$blue-300};
+
+  // badges
+  --badge-success-bg:     #{t.$green-950};
+  --badge-success-border: #{t.$green-300};
+  --badge-success-fg:     #{t.$green-300};
+  --badge-danger-bg:      #{t.$red-950};
+  --badge-danger-border:  #{t.$red-300};
+  --badge-danger-fg:      #{t.$red-300};
+  --badge-warning-bg:     #1C1306;
+  --badge-warning-border: #{t.$warn-300};
+  --badge-warning-fg:     #{t.$warn-300};
+  --badge-info-bg:        #0A1929;
+  --badge-info-border:    #{t.$blue-300};
+  --badge-info-fg:        #{t.$blue-300};
+
+  // inputs
+  --input-bg:           #{t.$slate-700};
+  --input-border:       #{t.$slate-600};
+  --input-fg:           #{t.$slate-100};
+  --input-placeholder:  #{t.$slate-400};
+  --input-label-fg:     #{t.$slate-100};
+  --input-hint-fg:      #{t.$slate-400};
+  --input-error-fg:     #{t.$red-300};
+  --input-error-border: #{t.$red-300};
+
+  // card
+  --card-bg:       #{t.$slate-800};
+  --card-border:   #{t.$slate-700};
+  --card-meta-fg:  #{t.$slate-500};
+  --card-title-fg: #{t.$slate-100};
+  --card-body-fg:  #{t.$slate-400};
+  --card-link-fg:  #{t.$amber-500};
+
+  // swatch
+  --swatch-bg:       #{t.$slate-800};
+  --swatch-border:   #{t.$slate-700};
+  --swatch-name-fg:  #{t.$slate-100};
+  --swatch-hex-fg:   #{t.$slate-400};
+
+  // spacing cards
+  --space-card-bg:     #{t.$slate-800};
+  --space-card-border: #{t.$slate-700};
+  --space-bar-color:   #{t.$amber-500};
+  --space-card-fg:     #{t.$slate-100};
+  --space-card-sub:    #{t.$slate-400};
+
+  // typography rows
+  --typo-row-border: #{t.$slate-800};
+  --typo-label-fg:   #{t.$slate-500};
+
+  // stats
+  --stat-border:    #{t.$slate-800};
+  --stat-value-fg:  #{t.$slate-100};
+  --stat-accent-fg: #{t.$amber-500};
+  --stat-label-fg:  #{t.$slate-400};
+
+  // principle cards
+  --principle-bg:       #{t.$slate-800};
+  --principle-border:   #{t.$slate-700};
+  --principle-num-fg:   #{t.$slate-600};
+  --principle-title-fg: #{t.$amber-500};
+  --principle-body-fg:  #{t.$slate-400};
+
+  // callout
+  --callout-bg:     #{t.$green-950};
+  --callout-border: #{t.$green-300};
+  --callout-fg:     #{t.$green-300};
+
+  // focus
+  --focus-ring: #{t.$amber-500};
+}
+
+// =============================================================================
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg:          #{t.$slate-50};
+  --bg-surface:  #{t.$white};
+  --bg-elevated: #{t.$white};
+  --bg-sunken:   #{t.$slate-100};
+
+  --fg-1: #{t.$slate-800};
+  --fg-2: #{t.$slate-700};
+  --fg-3: #{t.$slate-500};
+  --fg-muted: #{t.$slate-400};
+
+  --accent:       #{t.$amber-500};
+  --accent-hover: #{t.$amber-600};
+  --link:         #{t.$amber-500};
+  --link-hover:   #{t.$amber-600};
+
+  --header-bg:     #{t.$white};
+  --header-border: #{t.$slate-200};
+
+  --logo-mark-bg:  #{t.$amber-500};
+  --logo-mark-fg:  #{t.$white};
+  --logo-text-fg:  #{t.$slate-800};
+
+  // sidebar stays dark in light mode
+  --sidebar-bg:            #{t.$slate-800};
+  --sidebar-border:        #{t.$slate-700};
+  --sidebar-label-fg:      #{t.$slate-500};
+  --sidebar-item-fg:       #{t.$slate-400};
+  --sidebar-item-hover-bg: #{t.$slate-700};
+  --sidebar-active-bg:     #{t.$amber-500};
+  --sidebar-active-fg:     #{t.$white};
+  --sidebar-active-icon:   #{t.$white};
+  --sidebar-divider:       #{t.$slate-700};
+
+  --ctrl-bg:        #{t.$slate-100};
+  --ctrl-border:    #{t.$slate-300};
+  --ctrl-fg:        #{t.$slate-400};
+  --ctrl-active-bg: #{t.$amber-500};
+  --ctrl-active-fg: #{t.$white};
+  --ctrl-label-fg:  #{t.$slate-400};
+
+  --breadcrumb-fg: #{t.$slate-400};
+
+  --chip-aaa-bg: #16a34a;
+  --chip-aaa-fg: #{t.$white};
+  --chip-aa-bg:  #1d4ed8;
+  --chip-aa-fg:  #{t.$white};
+
+  --section-label-fg: #{t.$slate-400};
+  --divider:          #{t.$slate-200};
+
+  --preview-bg:     #{t.$white};
+  --preview-border: #{t.$slate-200};
+  --preview-label:  #{t.$slate-400};
+
+  --do-bg:         #{t.$green-100};
+  --do-border:     #16a34a;
+  --do-label-fg:   #166534;
+  --do-text-fg:    #166534;
+  --do-inner-bg:   #{t.$white};
+  --dont-bg:       #{t.$red-100};
+  --dont-border:   #{t.$red-600};
+  --dont-label-fg: #{t.$red-800};
+  --dont-text-fg:  #{t.$red-800};
+  --dont-inner-bg: #{t.$white};
+
+  --btn-primary-bg:       #{t.$amber-500};
+  --btn-primary-fg:       #{t.$white};
+  --btn-secondary-bg:     transparent;
+  --btn-secondary-fg:     #{t.$slate-800};
+  --btn-secondary-border: #{t.$slate-800};
+  --btn-ghost-fg:         #{t.$slate-600};
+  --btn-ghost-border:     #{t.$slate-600};
+  --btn-disabled-bg:      #{t.$slate-200};
+  --btn-disabled-fg:      #{t.$slate-400};
+
+  --alert-success-bg:     #{t.$green-100};
+  --alert-success-border: #16a34a;
+  --alert-success-fg:     #166534;
+  --alert-danger-bg:      #{t.$red-100};
+  --alert-danger-border:  #{t.$red-600};
+  --alert-danger-fg:      #{t.$red-800};
+  --alert-warning-bg:     #{t.$warn-100};
+  --alert-warning-border: #{t.$warn-600};
+  --alert-warning-fg:     #{t.$warn-800};
+  --alert-info-bg:        #{t.$blue-100};
+  --alert-info-border:    #{t.$blue-700};
+  --alert-info-fg:        #{t.$blue-800};
+
+  --badge-success-bg:     #{t.$green-100};
+  --badge-success-border: #16a34a;
+  --badge-success-fg:     #166534;
+  --badge-danger-bg:      #{t.$red-100};
+  --badge-danger-border:  #{t.$red-600};
+  --badge-danger-fg:      #{t.$red-800};
+  --badge-warning-bg:     #{t.$warn-100};
+  --badge-warning-border: #{t.$warn-600};
+  --badge-warning-fg:     #{t.$warn-800};
+  --badge-info-bg:        #{t.$blue-100};
+  --badge-info-border:    #{t.$blue-700};
+  --badge-info-fg:        #{t.$blue-800};
+
+  --input-bg:           #{t.$white};
+  --input-border:       #{t.$slate-300};
+  --input-fg:           #{t.$slate-800};
+  --input-placeholder:  #{t.$slate-400};
+  --input-label-fg:     #{t.$slate-800};
+  --input-hint-fg:      #{t.$slate-500};
+  --input-error-fg:     #{t.$red-600};
+  --input-error-border: #{t.$red-600};
+
+  --card-bg:       #{t.$white};
+  --card-border:   #{t.$slate-200};
+  --card-meta-fg:  #{t.$slate-400};
+  --card-title-fg: #{t.$slate-800};
+  --card-body-fg:  #{t.$slate-600};
+  --card-link-fg:  #{t.$amber-500};
+
+  --swatch-bg:      #{t.$white};
+  --swatch-border:  #{t.$slate-200};
+  --swatch-name-fg: #{t.$slate-800};
+  --swatch-hex-fg:  #{t.$slate-500};
+
+  --space-card-bg:     #{t.$white};
+  --space-card-border: #{t.$slate-200};
+  --space-bar-color:   #{t.$amber-500};
+  --space-card-fg:     #{t.$slate-800};
+  --space-card-sub:    #{t.$slate-500};
+
+  --typo-row-border: #{t.$slate-200};
+  --typo-label-fg:   #{t.$slate-400};
+
+  --stat-border:    #{t.$slate-200};
+  --stat-value-fg:  #{t.$slate-800};
+  --stat-accent-fg: #{t.$amber-500};
+  --stat-label-fg:  #{t.$slate-500};
+
+  --principle-bg:       #{t.$white};
+  --principle-border:   #{t.$slate-200};
+  --principle-num-fg:   #{t.$slate-400};
+  --principle-title-fg: #{t.$amber-500};
+  --principle-body-fg:  #{t.$slate-600};
+
+  --callout-bg:     #{t.$green-100};
+  --callout-border: #16a34a;
+  --callout-fg:     #166534;
+
+  --focus-ring: #{t.$amber-500};
+}
+
+// =============================================================================
+[data-theme="hc"] {
+  color-scheme: dark;
+
+  --bg:          #{t.$black};
+  --bg-surface:  #{t.$black};
+  --bg-elevated: #{t.$black};
+  --bg-sunken:   #{t.$black};
+
+  --fg-1: #{t.$yellow-hc};
+  --fg-2: #{t.$yellow-hc};
+  --fg-3: #{t.$yellow-hc};
+  --fg-muted: #8A7C1F;
+
+  --accent:       #{t.$yellow-hc};
+  --accent-hover: #{t.$white};
+  --link:         #{t.$yellow-hc};
+  --link-hover:   #{t.$white};
+
+  --header-bg:     #{t.$black};
+  --header-border: #{t.$yellow-hc};
+
+  --logo-mark-bg:  #{t.$amber-500};
+  --logo-mark-fg:  #{t.$black};
+  --logo-text-fg:  #{t.$yellow-hc};
+
+  --sidebar-bg:            #{t.$black};
+  --sidebar-border:        #{t.$yellow-hc};
+  --sidebar-label-fg:      #{t.$yellow-hc};
+  --sidebar-item-fg:       #{t.$yellow-hc};
+  --sidebar-item-hover-bg: rgba(255,235,59,.12);
+  --sidebar-active-bg:     #{t.$yellow-hc};
+  --sidebar-active-fg:     #{t.$black};
+  --sidebar-active-icon:   #{t.$black};
+  --sidebar-divider:       #{t.$yellow-hc};
+
+  --ctrl-bg:        #{t.$black};
+  --ctrl-border:    #{t.$yellow-hc};
+  --ctrl-fg:        #{t.$yellow-hc};
+  --ctrl-active-bg: #{t.$yellow-hc};
+  --ctrl-active-fg: #{t.$black};
+  --ctrl-label-fg:  #{t.$yellow-hc};
+
+  --breadcrumb-fg: #{t.$yellow-hc};
+
+  --chip-aaa-bg: transparent;
+  --chip-aaa-fg: #{t.$yellow-hc};
+  --chip-aa-bg:  transparent;
+  --chip-aa-fg:  #{t.$yellow-hc};
+
+  --section-label-fg: #{t.$yellow-hc};
+  --divider:          #{t.$yellow-hc};
+
+  --preview-bg:     #{t.$black};
+  --preview-border: #{t.$yellow-hc};
+  --preview-label:  #{t.$yellow-hc};
+
+  --do-bg:         #{t.$black};
+  --do-border:     #{t.$yellow-hc};
+  --do-label-fg:   #{t.$yellow-hc};
+  --do-text-fg:    #{t.$yellow-hc};
+  --do-inner-bg:   #111;
+  --dont-bg:       #{t.$black};
+  --dont-border:   #{t.$yellow-hc};
+  --dont-label-fg: #{t.$yellow-hc};
+  --dont-text-fg:  #{t.$yellow-hc};
+  --dont-inner-bg: #111;
+
+  --btn-primary-bg:       #{t.$yellow-hc};
+  --btn-primary-fg:       #{t.$black};
+  --btn-secondary-bg:     transparent;
+  --btn-secondary-fg:     #{t.$yellow-hc};
+  --btn-secondary-border: #{t.$yellow-hc};
+  --btn-ghost-fg:         #{t.$yellow-hc};
+  --btn-ghost-border:     #{t.$yellow-hc};
+  --btn-disabled-bg:      #333;
+  --btn-disabled-fg:      #666;
+
+  --alert-success-bg:     #{t.$black};
+  --alert-success-border: #{t.$yellow-hc};
+  --alert-success-fg:     #{t.$yellow-hc};
+  --alert-danger-bg:      #{t.$black};
+  --alert-danger-border:  #{t.$yellow-hc};
+  --alert-danger-fg:      #{t.$yellow-hc};
+  --alert-warning-bg:     #{t.$black};
+  --alert-warning-border: #{t.$yellow-hc};
+  --alert-warning-fg:     #{t.$yellow-hc};
+  --alert-info-bg:        #{t.$black};
+  --alert-info-border:    #{t.$yellow-hc};
+  --alert-info-fg:        #{t.$yellow-hc};
+
+  --badge-success-bg:     #{t.$black};
+  --badge-success-border: #{t.$yellow-hc};
+  --badge-success-fg:     #{t.$yellow-hc};
+  --badge-danger-bg:      #{t.$black};
+  --badge-danger-border:  #{t.$yellow-hc};
+  --badge-danger-fg:      #{t.$yellow-hc};
+  --badge-warning-bg:     #{t.$black};
+  --badge-warning-border: #{t.$yellow-hc};
+  --badge-warning-fg:     #{t.$yellow-hc};
+  --badge-info-bg:        #{t.$black};
+  --badge-info-border:    #{t.$yellow-hc};
+  --badge-info-fg:        #{t.$yellow-hc};
+
+  --input-bg:           #{t.$black};
+  --input-border:       #{t.$yellow-hc};
+  --input-fg:           #{t.$yellow-hc};
+  --input-placeholder:  #{t.$yellow-hc};
+  --input-label-fg:     #{t.$yellow-hc};
+  --input-hint-fg:      #{t.$yellow-hc};
+  --input-error-fg:     #{t.$yellow-hc};
+  --input-error-border: #{t.$yellow-hc};
+
+  --card-bg:       #{t.$black};
+  --card-border:   #{t.$yellow-hc};
+  --card-meta-fg:  #{t.$yellow-hc};
+  --card-title-fg: #{t.$yellow-hc};
+  --card-body-fg:  #{t.$yellow-hc};
+  --card-link-fg:  #{t.$yellow-hc};
+
+  --swatch-bg:      #{t.$black};
+  --swatch-border:  #{t.$yellow-hc};
+  --swatch-name-fg: #{t.$yellow-hc};
+  --swatch-hex-fg:  #{t.$yellow-hc};
+
+  --space-card-bg:     #{t.$black};
+  --space-card-border: #{t.$yellow-hc};
+  --space-bar-color:   #{t.$yellow-hc};
+  --space-card-fg:     #{t.$yellow-hc};
+  --space-card-sub:    #{t.$yellow-hc};
+
+  --typo-row-border: #{t.$yellow-hc};
+  --typo-label-fg:   #{t.$yellow-hc};
+
+  --stat-border:    #{t.$yellow-hc};
+  --stat-value-fg:  #{t.$yellow-hc};
+  --stat-accent-fg: #{t.$yellow-hc};
+  --stat-label-fg:  #{t.$yellow-hc};
+
+  --principle-bg:       #{t.$black};
+  --principle-border:   #{t.$yellow-hc};
+  --principle-num-fg:   #{t.$yellow-hc};
+  --principle-title-fg: #{t.$yellow-hc};
+  --principle-body-fg:  #{t.$yellow-hc};
+
+  --callout-bg:     #{t.$black};
+  --callout-border: #{t.$yellow-hc};
+  --callout-fg:     #{t.$yellow-hc};
+
+  --focus-ring: #{t.$white};
+}

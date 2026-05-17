@@ -1,0 +1,81 @@
+@use "tokens" as t;
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: calc(100% * var(--font-scale, 1));
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: t.$font-sans;
+  font-size: 1.125rem; // 18px base
+  line-height: 1.6;
+  color: var(--fg-1);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app { min-height: 100vh; display: flex; flex-direction: column; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: t.$font-sans;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+}
+
+p { max-width: 80ch; }
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  &:hover { color: var(--link-hover); text-decoration-thickness: 3px; }
+}
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+img, svg { display: block; max-width: 100%; }
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: t.$radius-sm;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -120px; left: 1rem;
+  background: var(--accent);
+  color: var(--btn-primary-fg);
+  padding: .75rem 1.5rem;
+  font-weight: 700;
+  border-radius: t.$radius-md;
+  z-index: 9999;
+  transition: top .2s ease;
+  &:focus { top: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
