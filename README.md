@@ -2,8 +2,6 @@
 
 Design system acessível para **baixa visão**, com 3 modos (Claro / Escuro / Alto Contraste), controle de tamanho de fonte e tokens calibrados em WCAG 2.2 AAA quando possível.
 
-> Reescrito a partir do arquivo Figma do TCC ("TCC - Design System.fig").
-
 ## Stack
 
 - **Vue 3** + Composition API
